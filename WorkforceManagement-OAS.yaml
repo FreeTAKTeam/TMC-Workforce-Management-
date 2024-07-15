@@ -1,0 +1,803 @@
+openapi: 3.0.1
+info:
+  title: WorkforceManagement
+  version: '24.07.12'
+  description: >-
+    The responsibilities of the Manage Field Workforce API is to manage the lifecycle of  work assignments or work orders  carried out by the workforce.  This will include managing the workforce staff (directly or indirectly) employed by, or operating as part of, the enterprise (i.e. technicians, clerks, managers, etc.) that are assigned to, and perform the work specified. The staff directly managed by these processes include all employees, contractors and who are paid by the enterprise.  The staff indirectly managed by these processes includes all employees, consultants and contractors paid by third parties who have commercial arrangements with the enterprise. In the cases where the third parties own and manage the service and/or resource infrastructure the Manage Field Workforce processes are responsible for requesting activities to be performed rather than directly assigning specific staff. The Manage Workforce processes also enable reporting and monitoring of assigned activities. Responsibilities of these processes include, but are not limited to:
+    - Establishing and managing work assignment queues through which requests for work activities are received fromother APIs
+    - Establishing and managing staff lists, containing details about assignable staff such as location, skills, availability for assignment etc.;
+    - Establishing, managing and distributing individuals work assignments to staff outlining the daily, or other time breadth, work assignments;
+    - Establishing and managing fast-track and jeopardy re-assignment capabilities to allow for modification of work assignments as required to meet jeopardy or other high priority conditions;
+    - Managing appointment schedules, including viewing and scheduling of appointments;
+    - Managing work orders, including issuance and closure;
+    - Forecasting assignable staffing requirements on a daily, weekly and longer period basis, based on historic work volume records, and forecast activity volumes;
+    - Determining work activity time estimates for all known work activities, based on actual historic results or on forward estimates, to be used as a parameter for scheduling work rosters;
+    - Establishing and managing recall capabilities to allow for out-of-hours staff recall in the event of unforeseen circumstances;
+    - Managing the registration and access control processes that enable processes to create, modify, update, delete and/or download scheduling and work assignment data to and from the workforce management system(s);
+    - Establishing and managing information transfer between the enterprise workforce management system(s) and those of external third parties (when the infrastructure is owned and operated by third parties);
+    - Ensuring MFW system(s) accurately captures and records all assignment and  work scheduling details, through use of automated or manual audits;
+    - Tracking and monitoring of the usage of, and access to, the MFW system(s) and associated costs of the Manage Field Workforce processes, and reporting on the findings
+    - Identifying any technical driven shortcomings of the workforce management system(s), and providing input to Resource Development &amp; Management processes to rectify these issues.- 
+  contact:
+    name: Giu Platania
+    url: www.Levio.ca
+    email: Giu Platania@Levio.ca
+  license:
+    name: Apache 2
+paths:
+  /Employee:
+    post:
+      tags:
+       - Employee
+      x-scope: public
+      description: >-
+      summary: Creates a new employee record.
+      operationId: CreateEmployee
+      requestBody:
+        $ref: '#/components/requestBodies/Employee'
+      responses:
+        '200':
+          $ref: '#/components/responses/200Employee_post'
+    delete:
+      tags:
+       - Employee
+      x-scope: public
+      description: >-
+      summary: Deletes an existing employee record based on the provided ID.
+      operationId: DeleteEmployee
+      parameters:
+        - $ref: '#/components/parameters/ID'
+      responses:
+        '200':
+          $ref: '#/components/responses/200Employee_delete'
+    get:
+      tags:
+       - Employee
+      x-scope: public
+      description: >-
+      summary: Retrieves a list of all employees.
+      operationId: ListEmployee
+      responses:
+        '200':
+          $ref: '#/components/responses/200Employee_get'
+    patch:
+      tags:
+       - Employee
+      x-scope: public
+      description: >-
+      summary: Updates an existing employee record.
+      operationId: PatchEmployee
+      requestBody:
+        $ref: '#/components/requestBodies/Employee'
+      responses:
+        '200':
+          $ref: '#/components/responses/200Employee_patch'
+  /Region:
+    post:
+      tags:
+       - Region
+      x-scope: public
+      description: >-
+      summary: TODO
+      operationId: CreateRegion
+      requestBody:
+        $ref: '#/components/requestBodies/Region'
+      responses:
+        '200':
+          $ref: '#/components/responses/200Region_post'
+    delete:
+      tags:
+       - Region
+      x-scope: public
+      description: >-
+      summary: TODO
+      operationId: DeleteRegion
+      parameters:
+        - $ref: '#/components/parameters/ID'
+      responses:
+        '200':
+          $ref: '#/components/responses/200Region_delete'
+    get:
+      tags:
+       - Region
+      x-scope: public
+      description: >-
+      summary: TODO
+      operationId: ListRegion
+      responses:
+        '200':
+          $ref: '#/components/responses/200Region_get'
+    patch:
+      tags:
+       - Region
+      x-scope: public
+      description: >-
+      summary: TODO
+      operationId: PatchRegion
+      requestBody:
+        $ref: '#/components/requestBodies/Region'
+      responses:
+        '200':
+          $ref: '#/components/responses/200Region_patch'
+  /Money:
+    post:
+      tags:
+       - Money
+      x-scope: public
+      description: >-
+      summary: Creates a new Money record.
+      operationId: CreateMoney
+      requestBody:
+        $ref: '#/components/requestBodies/Money'
+      responses:
+        '200':
+          $ref: '#/components/responses/200Money_post'
+    delete:
+      tags:
+       - Money
+      x-scope: public
+      description: >-
+      summary: Deletes an existing Money record based on the provided ID.
+      operationId: DeleteMoney
+      parameters:
+        - $ref: '#/components/parameters/ID'
+      responses:
+        '200':
+          $ref: '#/components/responses/200Money_delete'
+    get:
+      tags:
+       - Money
+      x-scope: public
+      description: >-
+      summary: Retrieves a list of all Money
+      operationId: ListMoney
+      responses:
+        '200':
+          $ref: '#/components/responses/200Money_get'
+    patch:
+      tags:
+       - Money
+      x-scope: public
+      description: >-
+      summary: Updates an existing Money record.
+      operationId: PatchMoney
+      requestBody:
+        $ref: '#/components/requestBodies/Money'
+      responses:
+        '200':
+          $ref: '#/components/responses/200Money_patch'
+  /Money/{id}:
+    get:
+      tags:
+       - Money
+      x-scope: public
+      description: >-
+      summary: retrieve an existing Money record based on the provided ID.
+      operationId: RetreiveMoney
+      parameters:
+        - $ref: '#/components/parameters/id'
+      responses:
+        '200':
+          $ref: '#/components/responses/200Money_get'
+  /Activity/Metric/TimeEfficiency:
+    post:
+      tags:
+       - Activity
+      x-scope: public
+      description: >-
+        retrieve a list of all Activity and calculate the average difference between Activity.plannedDuration and Activity.actualDuration returning a float value in this format ##,##
+      summary: Activity Metric TimeEfficiency
+      operationId: calculateActivityTimeEfficiency
+      responses:
+        '200':
+          $ref: '#/components/responses/200'
+  /Employee/{id}:
+    get:
+      tags:
+       - Employee
+      x-scope: public
+      description: >-
+      summary: TODO
+      operationId: RetreiveEmployee
+      parameters:
+        - $ref: '#/components/parameters/id'
+      responses:
+        '200':
+          $ref: '#/components/responses/200Employee_get'
+  /Schedule:
+    post:
+      tags:
+       - Schedule
+      x-scope: public
+      description: >-
+      summary: TODO
+      operationId: CreateSchedule
+      requestBody:
+        $ref: '#/components/requestBodies/Schedule'
+      responses:
+        '200':
+          $ref: '#/components/responses/200Schedule_post'
+    delete:
+      tags:
+       - Schedule
+      x-scope: public
+      description: >-
+      summary: TODO
+      operationId: DeleteSchedule
+      parameters:
+        - $ref: '#/components/parameters/ID'
+      responses:
+        '200':
+          $ref: '#/components/responses/200Schedule_delete'
+    get:
+      tags:
+       - Schedule
+      x-scope: public
+      description: >-
+      summary: TODO
+      operationId: ListSchedule
+      responses:
+        '200':
+          $ref: '#/components/responses/200Schedule_get'
+    patch:
+      tags:
+       - Schedule
+      x-scope: public
+      description: >-
+      summary: TODO
+      operationId: PatchSchedule
+      requestBody:
+        $ref: '#/components/requestBodies/Schedule'
+      responses:
+        '200':
+          $ref: '#/components/responses/200Schedule_patch'
+  /Region/{id}:
+    get:
+      tags:
+       - Region
+      x-scope: public
+      description: >-
+      summary: TODO
+      operationId: RetreiveRegion
+      parameters:
+        - $ref: '#/components/parameters/id'
+      responses:
+        '200':
+          $ref: '#/components/responses/200Region_get'
+  /Schedule/{id}:
+    get:
+      tags:
+       - Schedule
+      x-scope: public
+      description: >-
+      summary: TODO
+      operationId: RetreiveSchedule
+      parameters:
+        - $ref: '#/components/parameters/id'
+      responses:
+        '200':
+          $ref: '#/components/responses/200Schedule_get'
+  /Activity:
+    post:
+      tags:
+       - Activity
+      x-scope: public
+      description: >-
+      summary: Activity creation
+      operationId: CreateActivity
+      requestBody:
+        $ref: '#/components/requestBodies/Activity'
+      responses:
+        '200':
+          $ref: '#/components/responses/200Activity_post'
+    delete:
+      tags:
+       - Activity
+      x-scope: public
+      description: >-
+      summary: TODO
+      operationId: DeleteActivity
+      parameters:
+        - $ref: '#/components/parameters/ID'
+      responses:
+        '200':
+          $ref: '#/components/responses/200Activity_delete'
+    get:
+      tags:
+       - Activity
+      x-scope: public
+      description: >-
+      summary: TODO
+      operationId: ListActivity
+      responses:
+        '200':
+          $ref: '#/components/responses/200Activity_get'
+    patch:
+      tags:
+       - Employee
+      x-scope: public
+      description: >-
+      summary: TODO
+      operationId: PatchActivity
+      requestBody:
+        $ref: '#/components/requestBodies/Activity'
+      responses:
+        '200':
+          $ref: '#/components/responses/200Activity_patch'
+  /Activity/{id}:
+    get:
+      tags:
+       - Activity
+      x-scope: public
+      description: >-
+      summary: TODO
+      operationId: RetreiveActivity
+      parameters:
+        - $ref: '#/components/parameters/id'
+      responses:
+        '200':
+          $ref: '#/components/responses/200Activity_get'
+components:
+  schemas:
+    Activity:
+      allOf:
+        - $ref: '#/components/schemas/ProjectElement'
+        - type: object
+          properties:
+            activityNr:
+              type: string
+              description: >-
+            name:
+              type: string
+              description: >-
+            status:
+              type: string
+              description: >-
+            input:
+              type: string
+              description: >-
+            output:
+              type: string
+              description: >-
+            plannedStart:
+              type: string
+              description: >-
+            plannedEnd:
+              type: string
+              description: >-
+            plannedTenure:
+              type: string
+              description: >-
+            ActivityDoneFor:
+              type: string
+              description: >-
+            actualCost:
+              description: >-
+              nullable: true
+              type: string
+              x-reference: '#/components/schemas/Money'
+            ActivityReferences:
+              description: >-
+              nullable: false
+              type: array
+              items:
+                type: string
+                x-reference: '#/components/schemas/Activity'
+    Money:
+      allOf:
+        - type: object
+          properties:
+            unit:
+              type: string
+              description: >-
+                Currency (ISO4217 norm uses 3 letters to define the currency)
+            value:
+              type: string
+              description: >-
+                A signed floating point number, the meaning of the sign is according to the context of the API that uses this Data type
+    ProjectElement:
+      allOf:
+        - type: object
+          properties:
+            plannedDuration:
+              type: string
+              description: >-
+            actualDuration:
+              type: string
+              description: >-
+            currentDuration:
+              type: string
+              description: >-
+            status:
+              type: string
+              description: >-
+            priority:
+              type: string
+              description: >-
+            timingConstraint:
+              type: string
+              description: >-
+    Employee:
+      allOf:
+        - type: object
+          properties:
+            EmplNumber:
+              type: integer
+              description: >-
+            LastName:
+              type: string
+              description: >-
+            FirstName:
+              type: string
+              description: >-
+            MiddleName:
+              type: string
+              description: >-
+            isManager:
+              type: string
+              description: >-
+            RegionID:
+              type: integer
+              description: >-
+            EmplStreet1:
+              type: string
+              description: >-
+            EmplStreet2:
+              type: string
+              description: >-
+            EmplPostalCode:
+              type: string
+              description: >-
+            EmplCity:
+              type: string
+              description: >-
+            EmplSalary:
+              type: string
+              description: >-
+            is Manager of:
+              description: >-
+              nullable: true
+              type: array
+              items:
+                type: string
+                x-reference: '#/components/schemas/Employee'
+            responsible for:
+              description: >-
+              nullable: true
+              type: string
+              x-reference: '#/components/schemas/Region'
+    Region:
+      allOf:
+        - type: object
+          properties:
+            RegionID:
+              type: integer
+              description: >-
+            RegionName:
+              type: string
+              description: >-
+    Schedule:
+      allOf:
+        - type: object
+          properties:
+            employee:
+              description: >-
+              nullable: true
+              type: string
+              x-reference: '#/components/schemas/Employee'
+            activity:
+              description: >-
+              nullable: false
+              type: array
+              items:
+                type: string
+                x-reference: '#/components/schemas/Activity'
+    Error:
+      description: Error
+  parameters:
+    ID:
+      name: id
+      required: true
+      description: >-
+        TODO
+      schema:
+        type: string
+      in: query
+    id:
+      name: id
+      required: true
+      description: >-
+        TODO
+      schema:
+        type: string
+      in: path
+  responses:
+    200Employee_post:
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Employee'
+    200Employee_delete:
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Employee'
+    200Employee_get:
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Employee'
+    200Employee_patch:
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Employee'
+    200Region_post:
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Region'
+    200Region_delete:
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Region'
+    200Region_get:
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Region'
+    200Region_patch:
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Region'
+    200Money_post:
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Money'
+    200Money_delete:
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Money'
+    200Money_get:
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Money'
+    200Money_patch:
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Money'
+    200Schedule_post:
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Schedule'
+    200Schedule_delete:
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Schedule'
+    200Schedule_get:
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Schedule'
+    200Schedule_patch:
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Schedule'
+    200Activity_post:
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Activity'
+    200Activity_delete:
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Activity'
+    200Activity_get:
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Activity'
+    200Activity_patch:
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Activity'
+    '200':
+      description: OK
+    '201':
+      description: Added Object
+    '202':
+      description: Accepted
+    '204':
+      description: Deleted
+    '400':
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    '403':
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    '404':
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    '405':
+      description: Method Not allowed
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    '409':
+      description: Conflict
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    '501':
+      description: Not Implemented
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    '503':
+      description: Service Unavailable
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    'Error':
+      description: Error
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+  requestBodies:
+    Money:
+      description: >-
+        A base / value business entity used to represent money
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Money'
+      required: true
+    Employee:
+      description: >-
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Employee'
+      required: true
+    Schedule:
+      description: >-
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Schedule'
+      required: true
+    Activity:
+      description: >-
+        A small item of work, that aligns to a task in a process
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Activity'
+      required: true
+    Region:
+      description: >-
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Region'
+      required: true
+x-uml-relationships:
+  
+  - name: "actualCost"
+    x-ea-guid: FE21224F-BD0C-44e6-BFF8-5B07C2179FC9
+    source:
+      schema: "#/components/schemas/Activity"
+      multiplicity: "1..1"
+      navigability: Non-Navigable
+    target:
+      schema: "#/components/schemas/Money"
+      multiplicity: "1..1"
+      navigability: Navigable
+  - name: "ActivityReferences"
+    x-ea-guid: 0014C998-A910-43c4-AC56-5E9C04D875DC
+    source:
+      schema: "#/components/schemas/Activity"
+      multiplicity: "0..-1"
+      navigability: Unspecified
+    target:
+      schema: "#/components/schemas/Activity"
+      multiplicity: "0..-1"
+      navigability: Unspecified
+  - name: "is Manager of"
+    x-ea-guid: 591A1E72-7063-410d-BABF-232327C6B0A6
+    source:
+      schema: "#/components/schemas/Employee"
+      multiplicity: "1..1"
+      navigability: Unspecified
+    target:
+      schema: "#/components/schemas/Employee"
+      multiplicity: "1..-1"
+      navigability: Unspecified
+  - name: "responsible for"
+    x-ea-guid: D0EFC47F-321D-411c-B279-98C09DC3A98F
+    source:
+      schema: "#/components/schemas/Employee"
+      multiplicity: "1..1"
+      navigability: Unspecified
+    target:
+      schema: "#/components/schemas/Region"
+      multiplicity: "1..1"
+      navigability: Navigable
+  - name: "employee"
+    x-ea-guid: 2B2FB504-A00D-4085-B175-B0C55526DF6A
+    source:
+      schema: "#/components/schemas/Schedule"
+      multiplicity: "1..1"
+      navigability: Non-Navigable
+    target:
+      schema: "#/components/schemas/Employee"
+      multiplicity: "1..1"
+      navigability: Navigable
+  - name: "activity"
+    x-ea-guid: B02B67A3-F8D0-46d9-9182-2714ABD8B8C0
+    source:
+      schema: "#/components/schemas/Schedule"
+      multiplicity: "1..1"
+      navigability: Unspecified
+    target:
+      schema: "#/components/schemas/Activity"
+      multiplicity: "0..-1"
+      navigability: Navigable
+
