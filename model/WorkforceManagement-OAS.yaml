@@ -3,21 +3,47 @@ info:
   title: WorkforceManagement
   version: '24.07.12'
   description: >-
-    The responsibilities of the Manage Field Workforce API is to manage the lifecycle of  work assignments or work orders  carried out by the workforce.  This will include managing the workforce staff (directly or indirectly) employed by, or operating as part of, the enterprise (i.e. technicians, clerks, managers, etc.) that are assigned to, and perform the work specified. The staff directly managed by these processes include all employees, contractors and who are paid by the enterprise.  The staff indirectly managed by these processes includes all employees, consultants and contractors paid by third parties who have commercial arrangements with the enterprise. In the cases where the third parties own and manage the service and/or resource infrastructure the Manage Field Workforce processes are responsible for requesting activities to be performed rather than directly assigning specific staff. The Manage Workforce processes also enable reporting and monitoring of assigned activities. Responsibilities of these processes include, but are not limited to:
-    - Establishing and managing work assignment queues through which requests for work activities are received fromother APIs
-    - Establishing and managing staff lists, containing details about assignable staff such as location, skills, availability for assignment etc.;
-    - Establishing, managing and distributing individuals work assignments to staff outlining the daily, or other time breadth, work assignments;
-    - Establishing and managing fast-track and jeopardy re-assignment capabilities to allow for modification of work assignments as required to meet jeopardy or other high priority conditions;
-    - Managing appointment schedules, including viewing and scheduling of appointments;
-    - Managing work orders, including issuance and closure;
-    - Forecasting assignable staffing requirements on a daily, weekly and longer period basis, based on historic work volume records, and forecast activity volumes;
-    - Determining work activity time estimates for all known work activities, based on actual historic results or on forward estimates, to be used as a parameter for scheduling work rosters;
-    - Establishing and managing recall capabilities to allow for out-of-hours staff recall in the event of unforeseen circumstances;
-    - Managing the registration and access control processes that enable processes to create, modify, update, delete and/or download scheduling and work assignment data to and from the workforce management system(s);
-    - Establishing and managing information transfer between the enterprise workforce management system(s) and those of external third parties (when the infrastructure is owned and operated by third parties);
-    - Ensuring MFW system(s) accurately captures and records all assignment and  work scheduling details, through use of automated or manual audits;
-    - Tracking and monitoring of the usage of, and access to, the MFW system(s) and associated costs of the Manage Field Workforce processes, and reporting on the findings
-    - Identifying any technical driven shortcomings of the workforce management system(s), and providing input to Resource Development &amp; Management processes to rectify these issues.- 
+    he Workforce Management (WFM) component within the Open Digital Architecture (ODA) framework is designed to optimize the management of an organization's human resources. It integrates various functionalities essential for efficient workforce planning, scheduling, and performance management, ensuring that the right people are in the right place at the right time, and their efforts align with the strategic goals of the enterprise.
+    
+    Key Features:
+    
+    Resource Allocation:
+    
+    Ensures optimal assignment of employees to tasks based on their skills, availability, and business requirements.
+    Supports dynamic reallocation in response to changing demands and priorities.
+    Scheduling and Rostering:
+    
+    Automates the creation of work schedules, considering employee preferences, availability, and labor laws.
+    Provides real-time adjustments and notifications to handle unexpected absences or changes in workload.
+    Time and Attendance:
+    
+    Tracks employee attendance, hours worked, overtime, and leave.
+    Integrates with payroll systems to ensure accurate and timely compensation.
+    Performance Management:
+    Monitors and evaluates employee performance through key performance indicators (KPIs) and metrics.
+    Supports continuous feedback, goal setting, and performance reviews to foster employee development and engagement.
+    Compliance and Reporting:
+    
+    Ensures adherence to labor laws, union agreements, and internal policies.
+    Provides comprehensive reporting and analytics to support decision-making and strategic planning.
+    Training and Development:
+    
+    Identifies skill gaps and facilitates employee training and development programs.
+    Tracks progress and effectiveness of training initiatives.
+    API Integration:
+    
+    Utilizes standardized APIs for seamless integration with other enterprise systems such as ERP, CRM, and payroll.
+    Ensures data consistency and real-time information flow across the organization.
+    Manage Field Workforce (MFW):
+    
+    Manages the lifecycle of work assignments or work orders carried out by the workforce.
+    Includes managing workforce staff (employees, contractors, consultants) directly or indirectly employed by the enterprise.
+    Manages work assignment queues, staff lists, individual work assignments, fast-track and jeopardy re-assignment capabilities.
+    Handles appointment schedules, work orders, forecasting staffing requirements, and work activity time estimates.
+    Establishes recall capabilities for out-of-hours staff recall.
+    Manages registration and access control processes for scheduling and work assignment data.
+    Ensures accurate capture and recording of all assignment and work scheduling details.
+    Tracks and monitors usage and access to the MFW system and associated costs.
   contact:
     name: Giu Platania
     url: www.Levio.ca
