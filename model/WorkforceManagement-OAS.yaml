@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: WorkforceManagement
-  version: '24.07.12'
+  version: '24.07.16'
   description: >-
     he Workforce Management (WFM) component within the Open Digital Architecture (ODA) framework is designed to optimize the management of an organization's human resources. It integrates various functionalities essential for efficient workforce planning, scheduling, and performance management, ensuring that the right people are in the right place at the right time, and their efforts align with the strategic goals of the enterprise.
     
@@ -47,7 +47,7 @@ info:
   contact:
     name: Giu Platania
     url: www.Levio.ca
-    email: Giu Platania@Levio.ca
+    email: Giu.Platania@Levio.ca
   license:
     name: Apache 2
 paths:
