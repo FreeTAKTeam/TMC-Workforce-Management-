@@ -156,7 +156,7 @@ class WorkforceManagementController(Controller):
         self.response.set_action("publish")
 
     def POSTRegion(self, body: 'str', client: 'NetworkClient', config_loader, *args, **kwargs):  # pylint: disable=unused-argument
-        """TODO"""
+        """Create a new region"""
 
         # initialize Region builder
         self.Region_builder.build_empty_object(config_loader=config_loader)
@@ -177,7 +177,7 @@ class WorkforceManagementController(Controller):
         self.response.set_action("publish")
 
     def DELETERegion(self, ID: str, client: 'NetworkClient', config_loader, *args, **kwargs):  # pylint: disable=unused-argument
-        """TODO"""
+        """Delete by ID a Region"""
         db_records = self.WorkforceManagement_persistence_controller.get_region(ID = ID)
         domain_records: List['Region'] = []
 
@@ -198,7 +198,7 @@ class WorkforceManagementController(Controller):
         self.response.set_action("publish")
 
     def GETRegion(self, client: 'NetworkClient', config_loader, *args, **kwargs):  # pylint: disable=unused-argument
-        """TODO"""
+        """Returns a list of all Regions"""
         # retrieve the Region record from the database
         db_records = self.WorkforceManagement_persistence_controller.get_all_region()
         domain_records: List['Region'] = []
@@ -218,7 +218,7 @@ class WorkforceManagementController(Controller):
         self.response.set_action("publish")
 
     def PATCHRegion(self, body: 'Region',  client: 'NetworkClient', config_loader, *args, **kwargs):  # pylint: disable=unused-argument
-        """TODO"""
+        """Unpdate by ID a Region"""
         # create the basic domain object from the json data
         self.Region_builder.build_empty_object(config_loader)
         self.Region_builder.add_object_data(body, Protocols.JSON)
@@ -362,7 +362,7 @@ class WorkforceManagementController(Controller):
         return None
 
     def GETEmployeeId(self, ID: 'str', client: 'NetworkClient', config_loader, *args, **kwargs):  # pylint: disable=unused-argument
-        """TODO"""
+        """Return by ID an Employee"""
 
         # retrieve the Employee record from the database
         db_records = self.WorkforceManagement_persistence_controller.get_employee(ID = ID)
@@ -383,7 +383,7 @@ class WorkforceManagementController(Controller):
         self.response.set_action("publish")
 
     def POSTSchedule(self, body: 'str', client: 'NetworkClient', config_loader, *args, **kwargs):  # pylint: disable=unused-argument
-        """TODO"""
+        """Create a new Schedule"""
 
         # initialize Schedule builder
         domain_obj  = self.Schedule_director.construct_from_json(body, config_loader)
@@ -402,7 +402,7 @@ class WorkforceManagementController(Controller):
         self.response.set_action("publish")
 
     def DELETESchedule(self, ID: str, client: 'NetworkClient', config_loader, *args, **kwargs):  # pylint: disable=unused-argument
-        """TODO"""
+        """Delete by ID a Schehdule"""
         db_records = self.WorkforceManagement_persistence_controller.get_schedule(ID = ID)
         domain_records: List['Schedule'] = []
 
@@ -421,7 +421,7 @@ class WorkforceManagementController(Controller):
         self.response.set_action("publish")
 
     def GETSchedule(self, client: 'NetworkClient', config_loader, *args, **kwargs):  # pylint: disable=unused-argument
-        """TODO"""
+        """Returns a list of all Schedules"""
         # retrieve the Schedule record from the database
         db_records = self.WorkforceManagement_persistence_controller.get_all_schedule()
         domain_records: List['Schedule'] = []
@@ -440,7 +440,7 @@ class WorkforceManagementController(Controller):
         self.response.set_action("publish")
 
     def PATCHSchedule(self, body: 'Schedule',  client: 'NetworkClient', config_loader, *args, **kwargs):  # pylint: disable=unused-argument
-        """TODO"""
+        """Unpdate by ID a Schedule"""
         # create the basic domain object from the json data
         self.Schedule_builder.build_empty_object(config_loader)
         self.Schedule_builder.add_object_data(body, Protocols.JSON)
@@ -467,7 +467,7 @@ class WorkforceManagementController(Controller):
         self.response.set_action("publish")
 
     def GETRegionId(self, ID: 'str', client: 'NetworkClient', config_loader, *args, **kwargs):  # pylint: disable=unused-argument
-        """TODO"""
+        """Return by ID a Region"""
 
         # retrieve the Region record from the database
         db_records = self.WorkforceManagement_persistence_controller.get_region(ID = ID)
@@ -489,7 +489,7 @@ class WorkforceManagementController(Controller):
         self.response.set_action("publish")
 
     def GETScheduleId(self, ID: 'str', client: 'NetworkClient', config_loader, *args, **kwargs):  # pylint: disable=unused-argument
-        """TODO"""
+        """Return by ID a Schedule"""
 
         # retrieve the Schedule record from the database
         db_records = self.WorkforceManagement_persistence_controller.get_schedule(ID = ID)
@@ -529,7 +529,7 @@ class WorkforceManagementController(Controller):
         self.response.set_action("publish")
 
     def DELETEActivity(self, ID: str, client: 'NetworkClient', config_loader, *args, **kwargs):  # pylint: disable=unused-argument
-        """TODO"""
+        """Delete by ID an Activity"""
         db_records = self.WorkforceManagement_persistence_controller.get_activity(ID = ID)
         domain_records: List['Activity'] = []
 
@@ -548,7 +548,7 @@ class WorkforceManagementController(Controller):
         self.response.set_action("publish")
 
     def GETActivity(self, client: 'NetworkClient', config_loader, *args, **kwargs):  # pylint: disable=unused-argument
-        """TODO"""
+        """Returns a list of all Activities"""
         # retrieve the Activity record from the database
         db_records = self.WorkforceManagement_persistence_controller.get_all_activity()
         domain_records: List['Activity'] = []
@@ -567,7 +567,7 @@ class WorkforceManagementController(Controller):
         self.response.set_action("publish")
 
     def PATCHActivity(self, body: 'Activity',  client: 'NetworkClient', config_loader, *args, **kwargs):  # pylint: disable=unused-argument
-        """TODO"""
+        """Unpdate by ID an Activity"""
         # create the basic domain object from the json data
         self.Activity_builder.build_empty_object(config_loader)
         self.Activity_builder.add_object_data(body, Protocols.JSON)
@@ -594,7 +594,7 @@ class WorkforceManagementController(Controller):
         self.response.set_action("publish")
 
     def GETActivityId(self, ID: 'str', client: 'NetworkClient', config_loader, *args, **kwargs):  # pylint: disable=unused-argument
-        """TODO"""
+        """Return by ID an Activity"""
 
         # retrieve the Activity record from the database
         db_records = self.WorkforceManagement_persistence_controller.get_activity(ID = ID)

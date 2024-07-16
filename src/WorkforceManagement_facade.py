@@ -97,22 +97,22 @@ class WorkforceManagement(DefaultFacade):
         self.WorkforceManagement_controller.PATCHEmployee(*args, **kwargs)
     @DefaultFacade.public
     def POSTRegion(self, *args, **kwargs):
-        """TODO
+        """Create a new region
         """
         self.WorkforceManagement_controller.POSTRegion(*args, **kwargs)
     @DefaultFacade.public
     def DELETERegion(self, *args, **kwargs):
-        """TODO
+        """Delete by ID a Region
         """
         self.WorkforceManagement_controller.DELETERegion(*args, **kwargs)
     @DefaultFacade.public
     def GETRegion(self, *args, **kwargs):
-        """TODO
+        """Returns a list of all Regions
         """
         self.WorkforceManagement_controller.GETRegion(*args, **kwargs)
     @DefaultFacade.public
     def PATCHRegion(self, *args, **kwargs):
-        """TODO
+        """Unpdate by ID a Region
         """
         self.WorkforceManagement_controller.PATCHRegion(*args, **kwargs)
     @DefaultFacade.public
@@ -147,37 +147,37 @@ class WorkforceManagement(DefaultFacade):
         self.WorkforceManagement_controller.POSTActivityMetricTimeEfficiency(*args, **kwargs)
     @DefaultFacade.public
     def GETEmployeeId(self, *args, **kwargs):
-        """TODO
+        """Return by ID an Employee
         """
         self.WorkforceManagement_controller.GETEmployeeId(*args, **kwargs)
     @DefaultFacade.public
     def POSTSchedule(self, *args, **kwargs):
-        """TODO
+        """Create a new Schedule
         """
         self.WorkforceManagement_controller.POSTSchedule(*args, **kwargs)
     @DefaultFacade.public
     def DELETESchedule(self, *args, **kwargs):
-        """TODO
+        """Delete by ID a Schehdule
         """
         self.WorkforceManagement_controller.DELETESchedule(*args, **kwargs)
     @DefaultFacade.public
     def GETSchedule(self, *args, **kwargs):
-        """TODO
+        """Returns a list of all Schedules
         """
         self.WorkforceManagement_controller.GETSchedule(*args, **kwargs)
     @DefaultFacade.public
     def PATCHSchedule(self, *args, **kwargs):
-        """TODO
+        """Unpdate by ID a Schedule
         """
         self.WorkforceManagement_controller.PATCHSchedule(*args, **kwargs)
     @DefaultFacade.public
     def GETRegionId(self, *args, **kwargs):
-        """TODO
+        """Return by ID a Region
         """
         self.WorkforceManagement_controller.GETRegionId(*args, **kwargs)
     @DefaultFacade.public
     def GETScheduleId(self, *args, **kwargs):
-        """TODO
+        """Return by ID a Schedule
         """
         self.WorkforceManagement_controller.GETScheduleId(*args, **kwargs)
     @DefaultFacade.public
@@ -187,21 +187,21 @@ class WorkforceManagement(DefaultFacade):
         self.WorkforceManagement_controller.POSTActivity(*args, **kwargs)
     @DefaultFacade.public
     def DELETEActivity(self, *args, **kwargs):
-        """TODO
+        """Delete by ID an Activity
         """
         self.WorkforceManagement_controller.DELETEActivity(*args, **kwargs)
     @DefaultFacade.public
     def GETActivity(self, *args, **kwargs):
-        """TODO
+        """Returns a list of all Activities
         """
         self.WorkforceManagement_controller.GETActivity(*args, **kwargs)
     @DefaultFacade.public
     def PATCHActivity(self, *args, **kwargs):
-        """TODO
+        """Unpdate by ID an Activity
         """
         self.WorkforceManagement_controller.PATCHActivity(*args, **kwargs)
     @DefaultFacade.public
     def GETActivityId(self, *args, **kwargs):
-        """TODO
+        """Return by ID an Activity
         """
         self.WorkforceManagement_controller.GETActivityId(*args, **kwargs)

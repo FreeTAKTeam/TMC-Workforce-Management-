@@ -62,7 +62,7 @@ def PATCHEmployee():
     	return str(e), 500
 @page.route('/Region', methods=["POST"])
 def POSTRegion():
-    """TODO"""
+    """Create a new region"""
     try:
         # send data to the NetworkInterface
         response = BlueprintCommunicator().send_message_sync(
@@ -76,7 +76,7 @@ def POSTRegion():
     	return str(e), 500
 @page.route('/Region', methods=["DELETE"])
 def DELETERegion():
-    """TODO"""
+    """Delete by ID a Region"""
     try:
         # send data to the NetworkInterface
         response = BlueprintCommunicator().send_message_sync(
@@ -90,7 +90,7 @@ def DELETERegion():
     	return str(e), 500
 @page.route('/Region', methods=["GET"])
 def GETRegion():
-    """TODO"""
+    """Returns a list of all Regions"""
     try:
         # send data to the NetworkInterface
         response = BlueprintCommunicator().send_message_sync(
@@ -103,7 +103,7 @@ def GETRegion():
     	return str(e), 500
 @page.route('/Region', methods=["PATCH"])
 def PATCHRegion():
-    """TODO"""
+    """Unpdate by ID a Region"""
     try:
         # send data to the NetworkInterface
         response = BlueprintCommunicator().send_message_sync(
@@ -200,7 +200,7 @@ def POSTActivityMetricTimeEfficiency():
     	return str(e), 500
 @page.route('/Employee/<id>', methods=["GET"])
 def GETEmployeeId(id,):
-    """TODO"""
+    """Return by ID an Employee"""
     try:
         # send data to the NetworkInterface
         response = BlueprintCommunicator().send_message_sync(
@@ -215,7 +215,7 @@ def GETEmployeeId(id,):
     	return str(e), 500
 @page.route('/Schedule', methods=["POST"])
 def POSTSchedule():
-    """TODO"""
+    """Create a new Schedule"""
     try:
         # send data to the NetworkInterface
         response = BlueprintCommunicator().send_message_sync(
@@ -229,7 +229,7 @@ def POSTSchedule():
     	return str(e), 500
 @page.route('/Schedule', methods=["DELETE"])
 def DELETESchedule():
-    """TODO"""
+    """Delete by ID a Schehdule"""
     try:
         # send data to the NetworkInterface
         response = BlueprintCommunicator().send_message_sync(
@@ -243,7 +243,7 @@ def DELETESchedule():
     	return str(e), 500
 @page.route('/Schedule', methods=["GET"])
 def GETSchedule():
-    """TODO"""
+    """Returns a list of all Schedules"""
     try:
         # send data to the NetworkInterface
         response = BlueprintCommunicator().send_message_sync(
@@ -256,7 +256,7 @@ def GETSchedule():
     	return str(e), 500
 @page.route('/Schedule', methods=["PATCH"])
 def PATCHSchedule():
-    """TODO"""
+    """Unpdate by ID a Schedule"""
     try:
         # send data to the NetworkInterface
         response = BlueprintCommunicator().send_message_sync(
@@ -270,7 +270,7 @@ def PATCHSchedule():
     	return str(e), 500
 @page.route('/Region/<id>', methods=["GET"])
 def GETRegionId(id,):
-    """TODO"""
+    """Return by ID a Region"""
     try:
         # send data to the NetworkInterface
         response = BlueprintCommunicator().send_message_sync(
@@ -285,7 +285,7 @@ def GETRegionId(id,):
     	return str(e), 500
 @page.route('/Schedule/<id>', methods=["GET"])
 def GETScheduleId(id,):
-    """TODO"""
+    """Return by ID a Schedule"""
     try:
         # send data to the NetworkInterface
         response = BlueprintCommunicator().send_message_sync(
@@ -314,7 +314,7 @@ def POSTActivity():
     	return str(e), 500
 @page.route('/Activity', methods=["DELETE"])
 def DELETEActivity():
-    """TODO"""
+    """Delete by ID an Activity"""
     try:
         # send data to the NetworkInterface
         response = BlueprintCommunicator().send_message_sync(
@@ -328,7 +328,7 @@ def DELETEActivity():
     	return str(e), 500
 @page.route('/Activity', methods=["GET"])
 def GETActivity():
-    """TODO"""
+    """Returns a list of all Activities"""
     try:
         # send data to the NetworkInterface
         response = BlueprintCommunicator().send_message_sync(
@@ -341,7 +341,7 @@ def GETActivity():
     	return str(e), 500
 @page.route('/Activity', methods=["PATCH"])
 def PATCHActivity():
-    """TODO"""
+    """Unpdate by ID an Activity"""
     try:
         # send data to the NetworkInterface
         response = BlueprintCommunicator().send_message_sync(
@@ -355,7 +355,7 @@ def PATCHActivity():
     	return str(e), 500
 @page.route('/Activity/<id>', methods=["GET"])
 def GETActivityId(id,):
-    """TODO"""
+    """Return by ID an Activity"""
     try:
         # send data to the NetworkInterface
         response = BlueprintCommunicator().send_message_sync(
