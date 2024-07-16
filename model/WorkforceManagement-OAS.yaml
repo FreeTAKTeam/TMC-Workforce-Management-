@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: WorkforceManagement
-  version: '24.07.16'
+  version: '24.07.16.02'
   description: >-
     he Workforce Management (WFM) component within the Open Digital Architecture (ODA) framework is designed to optimize the management of an organization's human resources. It integrates various functionalities essential for efficient workforce planning, scheduling, and performance management, ensuring that the right people are in the right place at the right time, and their efforts align with the strategic goals of the enterprise.
     
@@ -53,9 +53,9 @@ info:
 paths:
   /Employee:
     post:
+      x-scope: public
       tags:
        - Employee
-      x-scope: public
       description: >-
       summary: Creates a new employee record.
       operationId: CreateEmployee
@@ -65,9 +65,9 @@ paths:
         '200':
           $ref: '#/components/responses/200Employee_post'
     delete:
+      x-scope: public
       tags:
        - Employee
-      x-scope: public
       description: >-
       summary: Deletes an existing employee record based on the provided ID.
       operationId: DeleteEmployee
@@ -77,9 +77,9 @@ paths:
         '200':
           $ref: '#/components/responses/200Employee_delete'
     get:
+      x-scope: public
       tags:
        - Employee
-      x-scope: public
       description: >-
       summary: Retrieves a list of all employees.
       operationId: ListEmployee
@@ -87,9 +87,9 @@ paths:
         '200':
           $ref: '#/components/responses/200Employee_get'
     patch:
+      x-scope: public
       tags:
        - Employee
-      x-scope: public
       description: >-
       summary: Updates an existing employee record.
       operationId: PatchEmployee
@@ -100,9 +100,9 @@ paths:
           $ref: '#/components/responses/200Employee_patch'
   /Region:
     post:
+      x-scope: public
       tags:
        - Region
-      x-scope: public
       description: >-
       summary: TODO
       operationId: CreateRegion
@@ -112,9 +112,9 @@ paths:
         '200':
           $ref: '#/components/responses/200Region_post'
     delete:
+      x-scope: public
       tags:
        - Region
-      x-scope: public
       description: >-
       summary: TODO
       operationId: DeleteRegion
@@ -124,9 +124,9 @@ paths:
         '200':
           $ref: '#/components/responses/200Region_delete'
     get:
+      x-scope: public
       tags:
        - Region
-      x-scope: public
       description: >-
       summary: TODO
       operationId: ListRegion
@@ -134,9 +134,9 @@ paths:
         '200':
           $ref: '#/components/responses/200Region_get'
     patch:
+      x-scope: public
       tags:
        - Region
-      x-scope: public
       description: >-
       summary: TODO
       operationId: PatchRegion
@@ -147,9 +147,9 @@ paths:
           $ref: '#/components/responses/200Region_patch'
   /Money:
     post:
+      x-scope: public
       tags:
        - Money
-      x-scope: public
       description: >-
       summary: Creates a new Money record.
       operationId: CreateMoney
@@ -159,9 +159,9 @@ paths:
         '200':
           $ref: '#/components/responses/200Money_post'
     delete:
+      x-scope: public
       tags:
        - Money
-      x-scope: public
       description: >-
       summary: Deletes an existing Money record based on the provided ID.
       operationId: DeleteMoney
@@ -171,9 +171,9 @@ paths:
         '200':
           $ref: '#/components/responses/200Money_delete'
     get:
+      x-scope: public
       tags:
        - Money
-      x-scope: public
       description: >-
       summary: Retrieves a list of all Money
       operationId: ListMoney
@@ -181,9 +181,9 @@ paths:
         '200':
           $ref: '#/components/responses/200Money_get'
     patch:
+      x-scope: public
       tags:
        - Money
-      x-scope: public
       description: >-
       summary: Updates an existing Money record.
       operationId: PatchMoney
@@ -194,9 +194,9 @@ paths:
           $ref: '#/components/responses/200Money_patch'
   /Money/{id}:
     get:
+      x-scope: public
       tags:
        - Money
-      x-scope: public
       description: >-
       summary: retrieve an existing Money record based on the provided ID.
       operationId: RetreiveMoney
@@ -207,9 +207,9 @@ paths:
           $ref: '#/components/responses/200Money_get'
   /Activity/Metric/TimeEfficiency:
     post:
+      x-scope: package
       tags:
        - Activity
-      x-scope: public
       description: >-
         retrieve a list of all Activity and calculate the average difference between Activity.plannedDuration and Activity.actualDuration returning a float value in this format ##,##
       summary: Activity Metric TimeEfficiency
@@ -219,9 +219,9 @@ paths:
           $ref: '#/components/responses/200'
   /Employee/{id}:
     get:
+      x-scope: public
       tags:
        - Employee
-      x-scope: public
       description: >-
       summary: TODO
       operationId: RetreiveEmployee
@@ -232,9 +232,9 @@ paths:
           $ref: '#/components/responses/200Employee_get'
   /Schedule:
     post:
+      x-scope: public
       tags:
        - Schedule
-      x-scope: public
       description: >-
       summary: TODO
       operationId: CreateSchedule
@@ -244,9 +244,9 @@ paths:
         '200':
           $ref: '#/components/responses/200Schedule_post'
     delete:
+      x-scope: public
       tags:
        - Schedule
-      x-scope: public
       description: >-
       summary: TODO
       operationId: DeleteSchedule
@@ -256,9 +256,9 @@ paths:
         '200':
           $ref: '#/components/responses/200Schedule_delete'
     get:
+      x-scope: public
       tags:
        - Schedule
-      x-scope: public
       description: >-
       summary: TODO
       operationId: ListSchedule
@@ -266,9 +266,9 @@ paths:
         '200':
           $ref: '#/components/responses/200Schedule_get'
     patch:
+      x-scope: public
       tags:
        - Schedule
-      x-scope: public
       description: >-
       summary: TODO
       operationId: PatchSchedule
@@ -279,9 +279,9 @@ paths:
           $ref: '#/components/responses/200Schedule_patch'
   /Region/{id}:
     get:
+      x-scope: public
       tags:
        - Region
-      x-scope: public
       description: >-
       summary: TODO
       operationId: RetreiveRegion
@@ -292,9 +292,9 @@ paths:
           $ref: '#/components/responses/200Region_get'
   /Schedule/{id}:
     get:
+      x-scope: public
       tags:
        - Schedule
-      x-scope: public
       description: >-
       summary: TODO
       operationId: RetreiveSchedule
@@ -305,9 +305,9 @@ paths:
           $ref: '#/components/responses/200Schedule_get'
   /Activity:
     post:
+      x-scope: public
       tags:
        - Activity
-      x-scope: public
       description: >-
       summary: Activity creation
       operationId: CreateActivity
@@ -317,9 +317,9 @@ paths:
         '200':
           $ref: '#/components/responses/200Activity_post'
     delete:
+      x-scope: public
       tags:
        - Activity
-      x-scope: public
       description: >-
       summary: TODO
       operationId: DeleteActivity
@@ -329,9 +329,9 @@ paths:
         '200':
           $ref: '#/components/responses/200Activity_delete'
     get:
+      x-scope: public
       tags:
        - Activity
-      x-scope: public
       description: >-
       summary: TODO
       operationId: ListActivity
@@ -339,9 +339,9 @@ paths:
         '200':
           $ref: '#/components/responses/200Activity_get'
     patch:
+      x-scope: public
       tags:
        - Employee
-      x-scope: public
       description: >-
       summary: TODO
       operationId: PatchActivity
@@ -352,9 +352,9 @@ paths:
           $ref: '#/components/responses/200Activity_patch'
   /Activity/{id}:
     get:
+      x-scope: public
       tags:
        - Activity
-      x-scope: public
       description: >-
       summary: TODO
       operationId: RetreiveActivity
