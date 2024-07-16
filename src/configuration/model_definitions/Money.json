@@ -1,0 +1,153 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "http://iec.ch/TC57/HealthClasses#",
+	"type": "object",
+	"definitions":
+	{
+		"Money":
+		{
+			"type": "object",
+			"properties": {
+				"unit":
+				{
+					"type": "string"
+				},
+				"value":
+				{
+					"type": "string"
+				}
+			}
+		}
+		,"Activity":
+		{
+			"type": "object",
+			"properties": {
+				"activityNr":
+				{
+					"type": "string"
+				},
+				"name":
+				{
+					"type": "string"
+				},
+				"status":
+				{
+					"type": "string"
+				},
+				"input":
+				{
+					"type": "string"
+				},
+				"output":
+				{
+					"type": "string"
+				},
+				"plannedStart":
+				{
+					"type": "string"
+				},
+				"plannedEnd":
+				{
+					"type": "string"
+				},
+				"plannedTenure":
+				{
+					"type": "string"
+				},
+				"ActivityDoneFor":
+				{
+					"type": "string"
+				},
+				"ActualCost":
+					{
+						"type": "string"
+					}
+			}
+		}
+		,"Schedule":
+		{
+			"type": "object",
+			"properties": {
+				"Employee":
+					{
+						"type": "string"
+					},
+				"Activity":
+					{
+						"type": "array",
+						"items": {
+							"type": "string"
+						}
+					}
+			}
+		}
+		,"Employee":
+		{
+			"type": "object",
+			"properties": {
+				"EmplNumber":
+				{
+					"type": "integer"
+				},
+				"LastName":
+				{
+					"type": "string"
+				},
+				"FirstName":
+				{
+					"type": "string"
+				},
+				"MiddleName":
+				{
+					"type": "string"
+				},
+				"isManager":
+				{
+					"type": "string"
+				},
+				"RegionID":
+				{
+					"type": "integer"
+				},
+				"EmplStreet1":
+				{
+					"type": "string"
+				},
+				"EmplStreet2":
+				{
+					"type": "string"
+				},
+				"EmplPostalCode":
+				{
+					"type": "string"
+				},
+				"EmplCity":
+				{
+					"type": "string"
+				},
+				"EmplSalary":
+				{
+					"type": "string"
+				},
+				"Responsiblefor":
+					{
+						"type": "string"
+					}
+			}
+		}
+		,"Region":
+		{
+			"type": "object",
+			"properties": {
+				"RegionID":
+				{
+					"type": "integer"
+				},
+				"RegionName":
+				{
+					"type": "string"
+				}
+			}
+		}
+	}
+}
