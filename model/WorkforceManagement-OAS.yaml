@@ -1,9 +1,10 @@
 openapi: 3.0.1
 info:
   title: WorkforceManagement
-  version: '24.07.16.02'
+  version: '24.07.16.04'
   description: >-
-    he Workforce Management (WFM) component within the Open Digital Architecture (ODA) framework is designed to optimize the management of an organization's human resources. It integrates various functionalities essential for efficient workforce planning, scheduling, and performance management, ensuring that the right people are in the right place at the right time, and their efforts align with the strategic goals of the enterprise.
+    new Levio version!!!
+    the Workforce Management (WFM) component within the Open Digital Architecture (ODA) framework is designed to optimize the management of an organization's human resources. It integrates various functionalities essential for efficient workforce planning, scheduling, and performance management, ensuring that the right people are in the right place at the right time, and their efforts align with the strategic goals of the enterprise.
     
     Key Features:
     
@@ -104,7 +105,7 @@ paths:
       tags:
        - Region
       description: >-
-      summary: TODO
+      summary: Create a new region
       operationId: CreateRegion
       requestBody:
         $ref: '#/components/requestBodies/Region'
@@ -116,7 +117,7 @@ paths:
       tags:
        - Region
       description: >-
-      summary: TODO
+      summary: Delete by ID a Region
       operationId: DeleteRegion
       parameters:
         - $ref: '#/components/parameters/ID'
@@ -128,7 +129,7 @@ paths:
       tags:
        - Region
       description: >-
-      summary: TODO
+      summary: Returns a list of all Regions
       operationId: ListRegion
       responses:
         '200':
@@ -138,7 +139,7 @@ paths:
       tags:
        - Region
       description: >-
-      summary: TODO
+      summary: Unpdate by ID a Region
       operationId: PatchRegion
       requestBody:
         $ref: '#/components/requestBodies/Region'
@@ -223,7 +224,7 @@ paths:
       tags:
        - Employee
       description: >-
-      summary: TODO
+      summary: Return by ID an Employee
       operationId: RetreiveEmployee
       parameters:
         - $ref: '#/components/parameters/id'
@@ -236,7 +237,7 @@ paths:
       tags:
        - Schedule
       description: >-
-      summary: TODO
+      summary: Create a new Schedule
       operationId: CreateSchedule
       requestBody:
         $ref: '#/components/requestBodies/Schedule'
@@ -248,7 +249,7 @@ paths:
       tags:
        - Schedule
       description: >-
-      summary: TODO
+      summary: Delete by ID a Schehdule
       operationId: DeleteSchedule
       parameters:
         - $ref: '#/components/parameters/ID'
@@ -260,7 +261,7 @@ paths:
       tags:
        - Schedule
       description: >-
-      summary: TODO
+      summary: Returns a list of all Schedules
       operationId: ListSchedule
       responses:
         '200':
@@ -270,7 +271,7 @@ paths:
       tags:
        - Schedule
       description: >-
-      summary: TODO
+      summary: Unpdate by ID a Schedule
       operationId: PatchSchedule
       requestBody:
         $ref: '#/components/requestBodies/Schedule'
@@ -283,7 +284,7 @@ paths:
       tags:
        - Region
       description: >-
-      summary: TODO
+      summary: Return by ID a Region
       operationId: RetreiveRegion
       parameters:
         - $ref: '#/components/parameters/id'
@@ -296,7 +297,7 @@ paths:
       tags:
        - Schedule
       description: >-
-      summary: TODO
+      summary: Return by ID a Schedule
       operationId: RetreiveSchedule
       parameters:
         - $ref: '#/components/parameters/id'
@@ -321,7 +322,7 @@ paths:
       tags:
        - Activity
       description: >-
-      summary: TODO
+      summary: Delete by ID an Activity
       operationId: DeleteActivity
       parameters:
         - $ref: '#/components/parameters/ID'
@@ -333,7 +334,7 @@ paths:
       tags:
        - Activity
       description: >-
-      summary: TODO
+      summary: Returns a list of all Activities
       operationId: ListActivity
       responses:
         '200':
@@ -341,9 +342,9 @@ paths:
     patch:
       x-scope: public
       tags:
-       - Employee
+       - Activity
       description: >-
-      summary: TODO
+      summary: Unpdate by ID an Activity
       operationId: PatchActivity
       requestBody:
         $ref: '#/components/requestBodies/Activity'
@@ -356,7 +357,7 @@ paths:
       tags:
        - Activity
       description: >-
-      summary: TODO
+      summary: Return by ID an Activity
       operationId: RetreiveActivity
       parameters:
         - $ref: '#/components/parameters/id'
